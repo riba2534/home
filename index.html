@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="riba2534的个人主页">
+    <meta name="keywords" content="riba2534, 个人主页, blog">
+    <title>riba2534 的个人主页</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1f2b, #34495e);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .avatar:hover {
+            transform: scale(1.1);
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .bio {
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            background: rgba(26, 31, 43, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            color: #fff;
+            transition: background 0.3s ease, transform 0.3s ease;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .link-item:hover {
+            background: #8e44ad;
+            transform: translateY(-3px);
+        }
+
+        .link-item i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="profile">
+            <div class="avatar">
+                <img src="https://image-1252109614.cos.ap-beijing.myqcloud.com/img/20210427152737.jpeg" alt="riba2534">
+            </div>
+            <h1 class="name">riba2534</h1>
+            <p class="bio" style="text-align: left;">
+            <i class="fas fa-laptop-code"></i> 服务端程序员 | Go/Py/Rs/C/C++<br>
+            <i class="fab fa-bitcoin"></i> BTC HODL | Don't Trust, Verify<br>
+            <i class="fas fa-coins"></i> Defi 套利  | Cefi量化 | Yield Farmer<br>
+            <i class="fas fa-check-circle"></i> 凡事有交代，件件有着落，事事有回音
+        </p>
+        </div>
+
+        <div class="links">
+            <a href="https://blog.riba2534.cn/" class="link-item blog" aria-label="My Blog">
+                <i class="fas fa-blog"></i>
+                <span>Blog</span>
+            </a>
+
+            <a href="https://x.com/riba2534" class="link-item twitter" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+            </a>
+
+            <a href="https://www.zhihu.com/people/riba2534" class="link-item zhihu" aria-label="知乎">
+                <i class="fab fa-zhihu"></i>
+                <span>知乎</span>
+            </a>
+
+            <a href="https://blog.csdn.net/riba2534" class="link-item csdn" aria-label="CSDN">
+                <i class="fas fa-code"></i>
+                <span>CSDN Blog</span>
+            </a>
+
+            <a href="mailto:riba2534@qq.com" class="link-item email" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+    </div>
+    <script>
+        VANTA.WAVES({
+            el: "#particles-js",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x0077ff,
+            shininess: 30.00,
+            waveHeight: 20.00,
+            waveSpeed: 1.00,
+            zoom: 0.85
+        });
+    </script>
+</body>
+
+</html>
