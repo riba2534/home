@@ -33,9 +33,10 @@
             justify-content: center;
             align-items: center;
             color: #fff;
-            padding: 40px;
+            padding: 40px 40px 80px 40px;
             position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
         }
 
         body::before {
@@ -409,68 +410,189 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 20px 20px 60px 20px;
+                align-items: flex-start;
+                padding-top: 30px;
+            }
+            
             .container {
-                padding: 32px 24px;
-                margin: 20px;
+                padding: 24px 18px;
+                margin: 15px 0px 15px 0px;
             }
             
             .avatar {
-                width: 120px;
-                height: 120px;
+                width: 100px;
+                height: 100px;
+                margin-bottom: 20px;
             }
             
             .name {
-                font-size: 28px;
+                font-size: 26px;
+                margin-bottom: 12px;
             }
             
             .bio {
-                font-size: 16px;
-                padding: 20px 16px;
-                line-height: 1.7;
-                letter-spacing: 0.2px;
+                font-size: 15px;
+                padding: 16px 12px;
+                line-height: 1.6;
+                letter-spacing: 0.1px;
+                margin-bottom: 28px;
             }
             
             .bio i {
-                margin-right: 10px;
-                width: 16px;
-                font-size: 15px;
+                margin-right: 8px;
+                width: 15px;
+                font-size: 14px;
             }
 
             .bio-item {
-                margin-bottom: 10px;
+                margin-bottom: 8px;
             }
             
             .link-item {
-                padding: 14px 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 20px;
-            }
-            
-            .container {
-                padding: 24px 20px;
+                padding: 12px 18px;
             }
             
             .links {
                 gap: 12px;
             }
         }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 15px 15px 50px 15px;
+                align-items: flex-start;
+                padding-top: 25px;
+            }
+            
+            .container {
+                padding: 20px 16px;
+                margin-bottom: 15px;
+            }
+            
+            .avatar {
+                width: 90px;
+                height: 90px;
+                margin-bottom: 16px;
+            }
+            
+            .name {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            
+            .bio {
+                font-size: 14px;
+                padding: 12px 8px;
+                line-height: 1.5;
+                margin-bottom: 24px;
+            }
+            
+            .bio i {
+                margin-right: 6px;
+                width: 14px;
+                font-size: 13px;
+            }
+
+            .bio-item {
+                margin-bottom: 6px;
+            }
+            
+            .link-item {
+                padding: 10px 16px;
+                font-size: 15px;
+            }
+            
+            .link-item i {
+                font-size: 16px;
+                margin-right: 12px;
+            }
+            
+            .links {
+                gap: 10px;
+            }
+
+            footer.icp-footer {
+                font-size: 11px;
+                bottom: 8px;
+                padding: 5px 8px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            body {
+                padding: 12px 12px 45px 12px;
+                padding-top: 20px;
+            }
+            
+            .container {
+                padding: 18px 14px;
+                margin-bottom: 12px;
+            }
+            
+            .avatar {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 14px;
+            }
+            
+            .name {
+                font-size: 22px;
+                margin-bottom: 8px;
+            }
+            
+            .bio {
+                font-size: 13px;
+                padding: 10px 6px;
+                margin-bottom: 20px;
+            }
+            
+            .bio i {
+                margin-right: 5px;
+                width: 13px;
+                font-size: 12px;
+            }
+
+            .bio-item {
+                margin-bottom: 5px;
+            }
+            
+            .link-item {
+                padding: 8px 14px;
+                font-size: 14px;
+            }
+            
+            .link-item i {
+                font-size: 15px;
+                margin-right: 10px;
+            }
+            
+            .links {
+                gap: 8px;
+            }
+
+            footer.icp-footer {
+                font-size: 10px;
+                bottom: 6px;
+                padding: 4px 6px;
+            }
+        }
         /* 新增：备案号（ICP备案号）样式 */
         footer.icp-footer {
             position: fixed;
-            bottom: 10px;
+            bottom: 15px;
             left: 0;
             width: 100%;
             text-align: center;
             font-size: 14px;
             color: rgba(255, 255, 255, 0.8);
             z-index: 10;
-            padding: 8px 0;
+            padding: 8px 20px;
             transition: all 0.3s ease;
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
         }
         
         footer.icp-footer a {
