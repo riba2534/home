@@ -272,48 +272,50 @@
         }
 
         .bio {
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.92);
-            margin-bottom: 32px;
+            font-size: 17px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.96);
+            margin-bottom: 36px;
             text-align: left;
-            line-height: 1.6;
-            background: rgba(0, 0, 0, 0.08);
-            backdrop-filter: blur(6px) saturate(100%);
-            -webkit-backdrop-filter: blur(6px) saturate(100%);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 24px;
+            line-height: 1.75;
+            letter-spacing: 0.3px;
+            background: transparent;
+            padding: 28px 24px;
             position: relative;
-            overflow: hidden;
-            box-shadow: 
-                0 12px 32px rgba(0, 0, 0, 0.2),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1),
-                inset 0 -1px 0 rgba(0, 0, 0, 0.12);
-            transform: translateZ(15px) rotateX(1deg);
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+            max-width: 100%;
         }
 
-        .bio::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            animation: scan 3s ease-in-out infinite;
+        .bio-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
         }
 
-        @keyframes scan {
-            0%, 100% { transform: translateX(-100%); }
-            50% { transform: translateX(100%); }
+        .bio-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .bio-item:hover {
+            transform: translateX(2px);
+            opacity: 1;
         }
 
         .bio i {
-            margin-right: 8px;
-            width: 16px;
+            margin-right: 12px;
+            width: 18px;
             text-align: center;
-            color: rgba(120, 219, 255, 0.9);
+            color: rgba(120, 219, 255, 0.95);
+            font-size: 16px;
+            vertical-align: middle;
+            filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
+            flex-shrink: 0;
+        }
+
+        .bio span {
+            font-weight: 400;
+            opacity: 0.96;
         }
 
         .links {
@@ -422,8 +424,20 @@
             }
             
             .bio {
+                font-size: 16px;
+                padding: 20px 16px;
+                line-height: 1.7;
+                letter-spacing: 0.2px;
+            }
+            
+            .bio i {
+                margin-right: 10px;
+                width: 16px;
                 font-size: 15px;
-                padding: 16px;
+            }
+
+            .bio-item {
+                margin-bottom: 10px;
             }
             
             .link-item {
@@ -507,18 +521,14 @@
             }
             
             .bio {
-                background: 
-                    linear-gradient(135deg, 
-                        rgba(255, 255, 255, 0.6) 0%, 
-                        rgba(255, 255, 255, 0.3) 100%);
-                backdrop-filter: blur(40px) saturate(120%);
-                -webkit-backdrop-filter: blur(40px) saturate(120%);
-                border: 1px solid rgba(255, 255, 255, 0.5);
-                color: rgba(45, 55, 72, 0.9);
-                box-shadow: 
-                    0 8px 24px rgba(0, 0, 0, 0.1),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.4),
-                    inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+                background: transparent;
+                color: rgba(45, 55, 72, 0.96);
+                text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+            }
+
+            .bio span {
+                color: rgba(45, 55, 72, 0.95);
+                opacity: 1;
             }
             
             .bio i {
@@ -583,12 +593,24 @@
                 <img src="https://image-1252109614.cos.ap-beijing.myqcloud.com/img/20210427152737.jpeg" alt="riba2534">
             </div>
             <h1 class="name">riba2534</h1>
-            <p class="bio" style="text-align: left;">
-            <i class="fas fa-laptop-code"></i> 服务端程序员 | Go/Py/Rs/C/C++<br>
-            <i class="fab fa-bitcoin"></i> BTC HODL | Don't Trust, Verify<br>
-            <i class="fas fa-coins"></i> Defi 套利  | Cefi量化 | Yield Farmer<br>
-            <i class="fas fa-check-circle"></i> 凡事有交代，件件有着落，事事有回音
-        </p>
+            <div class="bio">
+                <div class="bio-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>服务端程序员 | Go/Py/Rs/C/C++</span>
+                </div>
+                <div class="bio-item">
+                    <i class="fab fa-bitcoin"></i>
+                    <span>BTC HODL | Don't Trust, Verify</span>
+                </div>
+                <div class="bio-item">
+                    <i class="fas fa-coins"></i>
+                    <span>Defi 套利 | Cefi量化 | Yield Farmer</span>
+                </div>
+                <div class="bio-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>凡事有交代，件件有着落，事事有回音</span>
+                </div>
+            </div>
         </div>
 
         <div class="links">
